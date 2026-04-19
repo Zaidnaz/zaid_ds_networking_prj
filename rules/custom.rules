@@ -1,3 +1,0 @@
-alert icmp any any -> any any (msg:"Custom NIDS ICMP sweep candidate"; itype:8; sid:1000001; rev:1;)
-alert tcp any any -> any any (flags:S; msg:"Custom NIDS SYN scan candidate"; sid:1000002; rev:1;)
-alert tcp any any -> any 80 (msg:"Custom NIDS suspicious payload marker"; content:"attack_test"; nocase; sid:1000003; rev:1;)

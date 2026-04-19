@@ -1,1 +1,0 @@
-"""NIDS alerter package."""

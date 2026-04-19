@@ -1,9 +1,0 @@
-eve_file_path: ./suricata-logs/eve.json
-archive_output_path: ./data/alerts.log.jsonl
-high_or_critical_labels:
-  - high
-  - critical
-webhook_urls: []
-poll_interval_seconds: 0.5
-request_timeout_seconds: 5.0
-log_level: INFO

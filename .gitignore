@@ -1,14 +1,6 @@
-# Python cache and bytecode
 __pycache__/
 *.py[cod]
-
-# Virtual environment
 .venv/
-
-# Runtime logs and generated artifacts
-suricata-logs/
-data/alerts.log.jsonl
-
-# OS/editor
-.DS_Store
-Thumbs.db
+artifacts/
+outputs/
+*.pkl
