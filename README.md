@@ -74,6 +74,12 @@ Use the step-by-step notebook:
 
 - `nids_random_forest_demo.ipynb`
 
+Run order in notebook:
+
+1. Execute all cells from top to bottom.
+2. If NSL-KDD files are missing, the notebook uses temporary synthetic data automatically.
+3. Metrics and plots are saved automatically to the outputs folder.
+
 What it does:
 
 - Attempts to load real NSL-KDD data from `data/KDDTrain+.txt` and `data/KDDTest+.txt`
@@ -84,6 +90,8 @@ What it does:
 
 Notebook artifacts:
 
+- `data/input_features_sample.csv` (features-only input CSV for demo predictions)
+- `outputs/notebook/notebook_demo_data_preview.csv`
 - `outputs/notebook/notebook_metrics.txt`
 - `outputs/notebook/notebook_confusion_matrix.png`
 - `outputs/notebook/notebook_feature_importance_top20.png`
