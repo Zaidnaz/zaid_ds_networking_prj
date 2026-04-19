@@ -1,6 +1,13 @@
 __pycache__/
 *.py[cod]
 .venv/
-artifacts/
-outputs/
 *.pkl
+
+# Keep most generated artifacts ignored by default.
+artifacts/*
+outputs/*
+
+# Track demo outputs requested for submission/presentation.
+!artifacts/random_forest_nids_notebook.pkl
+!outputs/notebook/
+!outputs/notebook/*
