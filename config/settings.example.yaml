@@ -1,0 +1,23 @@
+# Path to Suricata eve.json output file
+eve_file_path: ./suricata-logs/eve.json
+
+# Local archive for normalized alerts
+archive_output_path: ./data/alerts.log.jsonl
+
+# Labels that trigger active notifications
+high_or_critical_labels:
+  - high
+  - critical
+
+# Add one or more endpoints for active alerting
+webhook_urls:
+  # - https://example.com/webhook/security-alerts
+
+# File-tail poll interval
+poll_interval_seconds: 0.5
+
+# Outbound notification timeout
+request_timeout_seconds: 5.0
+
+# Logging level: DEBUG | INFO | WARNING | ERROR
+log_level: INFO

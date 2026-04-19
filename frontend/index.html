@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NIDS Alert Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <header class="topbar">
+      <div>
+        <h1>NIDS Alert Dashboard</h1>
+        <p>Live severity triage from archived Suricata alerts</p>
+      </div>
+      <div class="status-wrap">
+        <span id="statusDot" class="status-dot"></span>
+        <span id="statusText">Connecting...</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="cards">
+        <article class="card total">
+          <h2>Total</h2>
+          <p id="totalCount">0</p>
+        </article>
+        <article class="card critical">
+          <h2>Critical</h2>
+          <p id="criticalCount">0</p>
+        </article>
+        <article class="card high">
+          <h2>High</h2>
+          <p id="highCount">0</p>
+        </article>
+        <article class="card medium">
+          <h2>Medium</h2>
+          <p id="mediumCount">0</p>
+        </article>
+        <article class="card low">
+          <h2>Low</h2>
+          <p id="lowCount">0</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Recent Alerts</h2>
+          <label>
+            Refresh (sec)
+            <input id="refreshInput" type="number" min="1" max="60" value="2" />
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Severity</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Signature</th>
+                <th>Protocol</th>
+              </tr>
+            </thead>
+            <tbody id="alertsBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <template id="rowTemplate">
+      <tr>
+        <td class="time"></td>
+        <td class="severity"></td>
+        <td class="src"></td>
+        <td class="dst"></td>
+        <td class="sig"></td>
+        <td class="proto"></td>
+      </tr>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
